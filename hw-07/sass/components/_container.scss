@@ -1,0 +1,44 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-text-color);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+img{
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.link{
+    display: block;
+    text-decoration: none;
+    color: $primary-text-color;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    
+    //outline: 2px solid red;
+}

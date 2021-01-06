@@ -1,0 +1,78 @@
+.header .container{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+    background-color: $main-bg;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.navlist{
+    display: flex;
+    @include font-config(500, 16px, 1.14, 0.02em);
+
+    .navlist-item:not(:first-child){
+        margin-left: 50px;
+    }
+}
+
+.navlist-item-link{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include font-config(500, 14px, 1.14, 0.02em);
+
+    transition: color 250ms $cubic-function;
+
+    &:hover,
+    &:focus{
+        color: $accent;
+        fill: $accent;
+    }
+}
+
+.contacts-link{
+    display: flex;
+    align-items: center;
+    color: $secondary-text-color;
+
+    transition: color 250ms $cubic-function;
+
+    &:hover,
+    &:focus{
+        color: $accent;
+        fill: $accent;
+    }
+}
+
+.logo-header{
+    color: $logo-color;
+    margin-right: 93px;
+}
+
+.contacts-header{
+    margin-left: auto;
+    display: flex;
+
+    .contacts-item:not(:first-child){
+        margin-left: 50px;
+    }
+}
+
+.select-page{
+    position: relative;
+    color: $accent;
+    &::after{
+        position: absolute;
+        bottom: 0;
+
+        display: block;
+        content: '';
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accent;
+    }
+}

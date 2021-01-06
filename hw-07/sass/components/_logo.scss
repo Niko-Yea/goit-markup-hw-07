@@ -1,0 +1,9 @@
+.logo{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    @include font-config(700, 26px, 1.2, 0.03em);
+}
+
+.logo > span{
+    color: $accent;
+}

@@ -1,0 +1,6 @@
+.button{
+    @include button(10px, 34px, $accent, $white-text);
+    @include font-config(700, 16px, 1.87, 0.06em);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    outline: transparent;
+}

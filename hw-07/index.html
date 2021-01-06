@@ -10,7 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
@@ -28,25 +28,25 @@
                 <label class="form-field form-dane">
                     <span class="form-label">Имя</span>
                     <input type="text" class="form-input" name="name">
-                    <svg class="icon-modal icon-person-black">
+                    <svg class="icon-modal">
                         <use href="./symbol-defs.svg#icon-person-black"></use>
                     </svg>
                 </label>
                 <label class="form-field form-dane">
                     <span class="form-label">Телефон</span>
                     <input type="tel" class="form-input" name="tel">
-                    <svg class="icon-modal icon-person-black">
+                    <svg class="icon-modal">
                         <use href="./symbol-defs.svg#icon-phone-black"></use>
                     </svg>
                 </label>
                 <label class="form-field form-dane">
                     <span class="form-label">Почта</span>
                     <input type="email" class="form-input" name="email">
-                    <svg class="icon-modal icon-person-black">
+                    <svg class="icon-modal">
                         <use href="./symbol-defs.svg#icon-email-black"></use>
                     </svg>
                 </label>
-                <label class="form-field form-comment">
+                <label class="form-field">
                     <span class="form-label">Комментарий</span>
                     <textarea name="comment" class="form-input" placeholder="Введите текст"></textarea>
                 </label>
@@ -68,7 +68,7 @@
             <!--main navigation in header-->
             <nav class="nav">
                 <a href="./index.html" class="link logo logo-header"><span>Web</span>Studio</a>
-                <ul class="list navlist">
+                <ul class="navlist">
                     <li class="list-item navlist-item"><a class="link navlist-item-link select-page"
                             href="./index.html">Студия</a></li>
                     <li class="list-item navlist-item"><a class="link navlist-item-link"
@@ -78,10 +78,10 @@
             </nav>
 
             <!--contacts information in header-->
-            <ul class="list contacts contacts-header">
+            <ul class="contacts contacts-header">
                 <li class="list-item contacts-item">
                     <a class="link contacts-link" href="mailto:info@devstudio.com">
-                        <svg class="icon icon-contacts" width="16" height="12">
+                        <svg class="icon-contacts" width="16" height="12">
                             <use href="./symbol-defs.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com
@@ -89,7 +89,7 @@
                 </li>
                 <li class="list-item contacts-item">
                     <a class="link contacts-link" href="tel:+380961111111">
-                        <svg class="icon icon-contacts" width="10" height="16">
+                        <svg class="icon-contacts" width="10" height="16">
                             <use href="./symbol-defs.svg#icon-smartphone"></use>
                         </svg>
                         +38 096 111 11 11
@@ -99,7 +99,7 @@
         </div>
     </header>
 
-    <main class="maininfo">
+    <main>
         <!--Hero-->
         <section class=" hero">
             <div class="container">
@@ -114,10 +114,10 @@
         <section class="properties">
             <div class="container">
                 <!--<h2>Профессиональные свойства</h2>-->
-                <ul class="list properties-list">
+                <ul class="properties-list">
                     <li class="list-item properties-item">
                         <div class="thumb">
-                            <svg class="icon" width="70" height="70">
+                            <svg width="70" height="70">
                                 <use href="./symbol-defs.svg#icon-antenna"></use>
                             </svg>
                         </div>
@@ -126,7 +126,7 @@
                     </li>
                     <li class="list-item properties-item">
                         <div class="thumb">
-                            <svg class="icon" width="70" height="70">
+                            <svg width="70" height="70">
                                 <use href="./symbol-defs.svg#icon-clock"></use>
                             </svg>
                         </div>
@@ -135,7 +135,7 @@
                     </li>
                     <li class="list-item properties-item">
                         <div class="thumb">
-                            <svg class="icon" width="70" height="70">
+                            <svg width="70" height="70">
                                 <use href="./symbol-defs.svg#icon-diagram"></use>
                             </svg>
                         </div>
@@ -144,7 +144,7 @@
                     </li>
                     <li class="list-item properties-item">
                         <div class="thumb">
-                            <svg class="icon" width="70" height="70">
+                            <svg width="70" height="70">
                                 <use href="./symbol-defs.svg#icon-astronaut"></use>
                             </svg>
                         </div>
@@ -160,7 +160,7 @@
         <section class="whatwedo">
             <div class="container">
                 <h2 class="title">Чем мы занимаемся</h2>
-                <ul class="list whatwedo-list">
+                <ul class="whatwedo-list">
                     <li class="list-item whatwedo-item">
                         <img src="./img/box-1.jpg" alt="programming" width="370" height="294">
                         <p class="whatwedo-text">Десктопные приложения</p>
@@ -182,13 +182,13 @@
         <section class="ourteam">
             <div class="container">
                 <h2 class="title">Наша команда</h2>
-                <ul class="list ourteam-list">
+                <ul class="ourteam-list">
                     <li class="list-item ourteam-item">
                         <img src="./img/demianenko.jpg" alt="фото дизайнера" width="270" height="260">
                         <div class="team-info">
                             <h3 class="team-title">Игорь Демьяненко</h3>
                             <p class="position" lang="en">Product Designer</p>
-                            <ul class="list social">
+                            <ul class="social">
                                 <li class="list-item social-link">
                                     <a class="link" href="">
                                         <svg class="icon-social">
@@ -226,7 +226,7 @@
                         <div class="team-info">
                             <h3 class="team-title">Ольга Репина</h3>
                             <p class="position" lang="en">Frontend Developer</p>
-                            <ul class="list social">
+                            <ul class="social">
                                 <li class="list-item social-link">
                                     <a class="link" href="">
                                         <svg class="icon-social">
@@ -264,7 +264,7 @@
                         <div class="team-info">
                             <h3 class="team-title">Николай Тарасов</h3>
                             <p class="position" lang="en">Marketing</p>
-                            <ul class="list social">
+                            <ul class="social">
                                 <li class="list-item social-link">
                                     <a class="link" href="">
                                         <svg class="icon-social">
@@ -302,7 +302,7 @@
                         <div class="team-info">
                             <h3 class="team-title">Михаил Ермаков</h3>
                             <p class="position" lang="en">UI Designer</p>
-                            <ul class="list social">
+                            <ul class="social">
                                 <li class="list-item social-link">
                                     <a class="link" href="">
                                         <svg class="icon-social">
@@ -343,7 +343,7 @@
         <section class="clients">
             <div class="container">
                 <h2 class="title">Постоянные клиенты</h2>
-                <ul class="list clients-list">
+                <ul class="clients-list">
                     <li class="list-item clients-item">
                         <a class="link" href="">
                             <svg class="icon-client">
@@ -394,21 +394,21 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="studia-info">
+            <div>
                 <a href="./index.html" class="link logo logo-footer"><span>Web</span>Studio</a>
                 <address class="address">
                     <p class="footer-address">г. Киев, пр-т Леси Украинки, 26</p>
-                    <ul class="list contacts contacts-footer">
-                        <li class="list-item contacts-item"><a class="link list-link contacts-link"
+                    <ul class="contacts contacts-footer">
+                        <li class="list-item contacts-item"><a class="link contacts-link"
                                 href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li class="list-item contacts-item"><a class="link list-link contacts-link"
-                                href="tel:+380961111111">+38 096 111 11 11</a></li>
+                        <li class="list-item contacts-item"><a class="link contacts-link" href="tel:+380961111111">+38
+                                096 111 11 11</a></li>
                     </ul>
                 </address>
             </div>
             <div class="social-info">
                 <p class="social-title">присоединяйтесь</p>
-                <ul class="list social">
+                <ul class="social">
                     <li class="list-item social-link">
                         <a class="link" href="">
                             <svg class="icon-social">

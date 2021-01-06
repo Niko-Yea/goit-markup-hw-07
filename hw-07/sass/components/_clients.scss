@@ -1,0 +1,46 @@
+.clients .container{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients .title{
+    text-align: center;
+    @include font-config(700, 36px, 1.16, 0.03em);
+}
+
+.clients .clients-list{
+    display: flex;
+    margin-top: 50px;
+
+    .clients-item:not(:last-child){
+        margin-right: 30px;
+    }
+}
+
+.clients .link{
+    display: flex;
+    width: 170px;
+    height: 90px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: border 250ms $cubic-function;
+
+    &:hover, 
+    &:focus{
+        border: 1px solid $accent;
+        border-radius: 4px;
+    }
+}
+
+.icon-client{
+    fill: #afb1b8;
+    transition: fill 250ms $cubic-function;
+
+    .clients .link:hover &,
+    .clients .link:focus &{
+        fill: $accent;
+    }
+}
+
+
+
