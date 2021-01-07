@@ -1,7 +1,7 @@
 .hero{
     margin:0 auto;
     max-width: 1600px;
-    background-color: var(--second-bg);
+    background-color: $second-bg;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), 
                                                 rgba(47, 48, 58, 0.4)), 
                                                 url(../img/hero-bg.jpg);
@@ -9,6 +9,14 @@
     background-size: cover;
 
     text-align: center;
+
+    .title-hero{
+        margin-bottom: 30px;
+
+        @include font-config(900, 44px, 1.36, 0.06em);
+        color: $white-text;
+        text-transform: uppercase;
+    }
 }
 
 .hero .container{
@@ -16,13 +24,3 @@
     padding-bottom: 200px;
 }
 
-.hero .title-hero{
-    margin-bottom: 30px;
-
-    color: $white-text;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-}

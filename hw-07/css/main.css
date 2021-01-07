@@ -252,7 +252,6 @@ li {
 }
 
 .form-title {
-  font-family: Roboto;
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
@@ -318,7 +317,7 @@ li {
   padding: 10px 29px;
 }
 
-.icon-button {
+.form-sub .button .icon-button {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -332,7 +331,7 @@ li {
 .hero {
   margin: 0 auto;
   max-width: 1600px;
-  background-color: var(--second-bg);
+  background-color: #2F303A;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/hero-bg.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-bg.jpg);
   background-repeat: no-repeat;
@@ -340,19 +339,19 @@ li {
   text-align: center;
 }
 
-.hero .container {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-
 .hero .title-hero {
   margin-bottom: 30px;
-  color: #ffffff;
-  text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .button {
@@ -382,6 +381,11 @@ li {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .backdrop.is-hidden .modalwindow {
   -webkit-transform: translate(-50%, -50%) scale(0.9);
           transform: translate(-50%, -50%) scale(0.9);
@@ -406,6 +410,16 @@ li {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modalwindow .modalwindow-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: #212121;
+  text-align: center;
+}
+
 .clsbtn {
   position: absolute;
   top: 8px;
@@ -422,33 +436,67 @@ li {
   fill: #2196f3;
 }
 
-.icon-clsbtn {
+.clsbtn .icon-clsbtn {
   width: 11px;
   height: 11px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.modalwindow-title {
-  margin-bottom: 12px;
-  color: #212121;
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
 .form-field {
   position: relative;
   display: block;
   margin-bottom: 10px;
+}
+
+.form-field textarea {
+  height: 120px;
+  padding: 12px 16px;
+}
+
+.form-field textarea::-webkit-input-placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field textarea:-ms-input-placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field textarea::-ms-input-placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field textarea::placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field .form-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+  font-family: Roboto;
 }
 
 .form-input {
@@ -478,56 +526,6 @@ li {
   padding-bottom: 12px;
 }
 
-.form-field textarea {
-  height: 120px;
-  padding: 12px 16px;
-}
-
-textarea::-webkit-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-textarea:-ms-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-textarea::-ms-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-textarea::placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.form-label {
-  color: #757575;
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-}
-
 .form-checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -542,7 +540,7 @@ textarea::placeholder {
   margin-bottom: 0px;
 }
 
-.visualy-hidden {
+.form-checkbox .visualy-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -550,16 +548,21 @@ textarea::placeholder {
   margin: -1px;
 }
 
-.form-field .policity {
+.form-checkbox .checkbox:checked + .policity::before {
+  border: 2px solid #2196f3;
+  background: #2196f3 url(../img/original-svg/icon-check.svg) no-repeat center;
+}
+
+.form-checkbox .policity {
   position: relative;
-  font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  font-family: Roboto;
 }
 
-.form-field .policity::before {
+.form-checkbox .policity::before {
   position: absolute;
   left: -20px;
   top: 50%;
@@ -573,11 +576,6 @@ textarea::placeholder {
   background: center;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.checkbox:checked + .policity::before {
-  border: 2px solid #2196f3;
-  background: #2196f3 url(../img/original-svg/icon-check.svg) no-repeat center;
 }
 
 .form .button {
@@ -617,16 +615,16 @@ textarea::placeholder {
   margin-right: 30px;
 }
 
-.properties-item > .properties-title {
+.properties-item .properties-title {
   margin-bottom: 10px;
-  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.properties-item > p {
+.properties-item p {
   color: #757575;
   font-weight: 400;
   font-size: 14px;
@@ -658,11 +656,11 @@ textarea::placeholder {
 
 .whatwedo .title {
   margin-bottom: 50px;
-  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  text-align: center;
 }
 
 .whatwedo-list {
@@ -671,12 +669,12 @@ textarea::placeholder {
   display: flex;
 }
 
-.whatwedo-item:not(:first-child) {
-  margin-left: 30px;
-}
-
 .whatwedo-item {
   position: relative;
+}
+
+.whatwedo-item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .whatwedo-text {
@@ -687,12 +685,12 @@ textarea::placeholder {
   padding-top: 27px;
   padding-bottom: 27px;
   background-color: rgba(47, 48, 58, 0.8);
-  color: #ffffff;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   letter-spacing: 0.03em;
+  color: #ffffff;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -705,6 +703,15 @@ textarea::placeholder {
   padding-bottom: 94px;
 }
 
+.ourteam .title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
 .ourteam-item {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -712,13 +719,8 @@ textarea::placeholder {
   border-radius: 0px 0px 4px 4px;
 }
 
-.ourteam .title {
-  margin-bottom: 50px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+.ourteam-item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .ourteam-list {
@@ -727,31 +729,26 @@ textarea::placeholder {
   display: flex;
 }
 
-.ourteam-item:not(:first-child) {
-  margin-left: 30px;
-}
-
 .team-info {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 30px 15px;
 }
 
-.ourteam-item .team-title {
+.team-info .team-title {
   margin-bottom: 10px;
-  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 
-.ourteam-item .position {
-  text-align: center;
-  color: #757575;
+.team-info .position {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #757575;
 }
 
 .social {
@@ -762,6 +759,10 @@ textarea::placeholder {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 16px;
+}
+
+.social .social-link:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-link .link {
@@ -781,22 +782,8 @@ textarea::placeholder {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link .link:hover,
-.social-link .link:focus {
+.social-link .link:hover, .social-link .link:focus {
   background-color: #2196f3;
-}
-
-.icon-social {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-}
-
-.social-link .icon-social {
-  fill: #AFB1B8;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link .link:hover .icon-social,
@@ -804,8 +791,14 @@ textarea::placeholder {
   fill: #ffffff;
 }
 
-.social .social-link:not(:last-child) {
-  margin-right: 10px;
+.icon-social {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  fill: #AFB1B8;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients .container {
@@ -865,37 +858,6 @@ textarea::placeholder {
   padding-bottom: 94px;
 }
 
-.portfolio-list-link {
-  color: #212121;
-  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-list-link .portfolio-list-desc {
-  margin-top: 4px;
-  color: #757575;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-}
-
-.portfolio-list-link .portfolio-list-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-}
-
-.list-item .border {
-  border: 1px solid #eeeeee;
-  border-top: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
 .portfolio-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -918,12 +880,37 @@ textarea::placeholder {
   margin-bottom: 0;
 }
 
-.portfolio-list-link {
-  display: block;
+.portfolio-list .list-item .border {
+  border: 1px solid #eeeeee;
+  border-top: none;
+  padding: 20px 24px;
 }
 
-.portfolio-list .portfolio-list-link:hover,
-.portfolio-list .portfolio-list-link:focus {
+.portfolio-list-link {
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-link .portfolio-list-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+
+.portfolio-list-link .portfolio-list-desc {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.portfolio-list-link:hover, .portfolio-list-link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -942,10 +929,7 @@ textarea::placeholder {
   color: #ffffff;
   width: 100%;
   height: 100%;
-  padding-top: 63px;
-  padding-bottom: 63px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 63px 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
@@ -973,7 +957,7 @@ textarea::placeholder {
   margin-bottom: 50px;
 }
 
-.filters .list-item:not(:last-child) {
+.filters .filters .list-item:not(:last-child) {
   margin-right: 8px;
 }
 

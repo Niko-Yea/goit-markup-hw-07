@@ -4,10 +4,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
-}
 
-.filters .list-item:not(:last-child){
-    margin-right: 8px;
+    .filters .list-item:not(:last-child){
+        margin-right: 8px;
+    }
 }
 
 .filters-button{

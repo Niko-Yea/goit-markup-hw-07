@@ -2,6 +2,10 @@
     display: flex;
     justify-content: center;
     margin-top: 16px;
+
+    .social-link:not(:last-child){
+        margin-right: 10px;
+    }
 }
 
 .social-link .link{
@@ -12,11 +16,16 @@
     height: 44px;
     border-radius: 50%;
     transition: background-color 250ms $cubic-function;
-}
 
-.social-link .link:hover,
-.social-link .link:focus{
-    background-color: $accent;
+    &:hover,
+    &:focus{
+        background-color: $accent;
+    }
+
+    &:hover .icon-social,
+    &:focus .icon-social{
+        fill: $white-text;
+    }
 }
 
 .icon-social{
@@ -24,18 +33,6 @@
     width: 20px;
     height: 20px;
     background-color: transparent;
-}
-
-.social-link .icon-social{
     fill: #AFB1B8;
     transition: fill 250ms $cubic-function;
-}
-
-.social-link .link:hover .icon-social,
-.social-link .link:focus .icon-social{
-    fill: $white-text;
-}
-
-.social .social-link:not(:last-child){
-    margin-right: 10px;
 }
