@@ -90,7 +90,6 @@
     .form-label{
     @include font-config(400, 12px, 1.16, 0.01em);
         color: $secondary-text-color;
-        font-family: Roboto;
     }
 }
 
@@ -146,7 +145,6 @@
     position: relative;
 
     @include font-config(400, 14px, 1.71, 0.03em);
-    font-family: Roboto;
 
     &::before{
         position: absolute;

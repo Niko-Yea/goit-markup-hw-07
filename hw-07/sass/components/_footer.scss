@@ -39,7 +39,6 @@
     margin-left: 70px;
 
     .social-title{
-        font-family: Roboto;
         @include font-config(700, 14px, 1.14, 0.03em);
         text-transform: uppercase;
         color: $white-text;
@@ -86,7 +85,6 @@
     color: $white-text;
     
     &::placeholder{
-        font-family: Roboto;
         @include font-config(400, 16px, 1.25, 0.03em);
         color: rgba(255, 255, 255, 0.6);
     }
