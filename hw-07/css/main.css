@@ -950,7 +950,7 @@ li {
   margin-bottom: 50px;
 }
 
-.filters .filters .list-item:not(:last-child) {
+.filters .list-item:not(:last-child) {
   margin-right: 8px;
 }
 
